@@ -14,3 +14,6 @@ export async function getBooks(search, startIndex) {
 
   return fetch(input)
 }
+
+
+// 따로 빼놔야한다

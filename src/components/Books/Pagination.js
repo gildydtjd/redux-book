@@ -5,8 +5,11 @@ import { useLocation } from 'react-router-dom'
 
 function Pagination() {
   const dispatch = useDispatch()
+  // 액션 디스패치
   const location = useLocation()
+  // 페이지의 값을 전달
   const { status, startIndex } = useSelector(selectBooks)
+  // 상태조회
   const isLoading = status === Status.Loading
 
   return (

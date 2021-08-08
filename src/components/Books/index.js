@@ -18,3 +18,6 @@ const styles = {
 }
 
 export default Books
+
+// 받아오는 데이터가 많기에 index.js로 나눈 것은 매우 좋지만
+// const styles 라는 이름에 mt-4라는 style과 별개인 내용이 들어가 불편하다.
