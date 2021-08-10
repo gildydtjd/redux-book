@@ -33,9 +33,15 @@ function Pagination() {
         //     dispatch(getItemsFailure(error))
         //   }
         // }
-
       }}
     >
+      {/* export const Status = {
+        Idle: 'idle',
+        Loading: 'loading',
+        Success: 'success',
+        Failure: 'failure'
+      } */}
+
       {isLoading ? '로딩중...' : '더보기'}
     </button>
   )

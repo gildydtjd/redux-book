@@ -6,6 +6,8 @@ import LinkToFilter from './LinkToFilter'
 function SearchForm() {
   const location = useLocation()
   // 페이지값 전달
+  console.log(location)
+
   const { state, handleChange, handleSubmit } = useForm()
   // form 상태관리
 
