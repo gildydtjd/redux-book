@@ -5,8 +5,9 @@ import LinkToFilter from './LinkToFilter'
 
 function SearchForm() {
   const location = useLocation()
-  // useLocation을 통해 페이지에서 전에 페이지의 데이터 값을 받는다
+  // 페이지값 전달
   const { state, handleChange, handleSubmit } = useForm()
+  // form 상태관리
 
   return (
     <form onSubmit={handleSubmit} className={styles.wrapper}>
@@ -30,7 +31,6 @@ function SearchForm() {
       </fieldset>
 
       {location.pathname === '/result' && <LinkToFilter />}
-      {/* location으로 받아온 pathname 을 여기서 사용한다 */}
     </form>
   )
 }

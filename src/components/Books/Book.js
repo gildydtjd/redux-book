@@ -2,13 +2,12 @@ import React from 'react'
 import { css, cx } from 'emotion'
 
 function Book({ defaultClassName, volumeInfo }) {
-  // defaultClassName 과 VolumeInfo 를 파라메터로 받는다.
+  // defaultClassName, volumeInfo를 파라메터로 받는다.
   return (
     <div className={cx([defaultClassName, styles.wrapper])}>
-      {/* cx 란 classNames라는 css 방식이라는데 css class명을 받아온 파라메터로 설정하는 방법이라한다. */}
       <img
         src={volumeInfo?.imageLinks?.thumbnail}
-        // volumeinfo가 참이라면? imagelink가 참이라면 thumnail 의 주소를 가져온다
+        // voluemInfo가 있고 imageLinks가 있을시 thumbnail 의 주소를 사용한다
         className={cx(
           styles.media,
           css({
@@ -49,6 +48,7 @@ function Book({ defaultClassName, volumeInfo }) {
           {volumeInfo?.authors && (
             <p className={styles.authors}>{volumeInfo.authors.join(', ')}</p>
           )}
+          {/* array의 모든요소를 문자열로 합친다 */}
           <p className={styles.publishedDate}>{volumeInfo?.publishedDate}</p>
         </div>
       </div>
@@ -70,5 +70,5 @@ const styles = {
 
 export default Book
 
-// 아무리 cx를 사용해서 받아온 파라메터의 값으로 styling을 한다하지만
-// 너무 위아래로 css가 들어가있어서 보기 불편하다.
+// Book을 랜더링하는 부모 영역에서 volumeInfo 에 대한 배열 정보를 확실하게 넘긴다.
+// 굳이 여기서 삼항연산자를 통해 설정할 필요가 없다.

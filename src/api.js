@@ -16,4 +16,4 @@ export async function getBooks(search, startIndex) {
 }
 
 
-// 따로 빼놔야한다
+// q?

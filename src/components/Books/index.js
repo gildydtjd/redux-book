@@ -19,5 +19,6 @@ const styles = {
 
 export default Books
 
-// 받아오는 데이터가 많기에 index.js로 나눈 것은 매우 좋지만
-// const styles 라는 이름에 mt-4라는 style과 별개인 내용이 들어가 불편하다.
+// book 파라메터로 defaultClassName, volumeInfo 를 받고있다.
+// 그러나 Book을 랜더하는 부모영역에서는 defaultClassName, {...item} 을 보내고있다.
+// 처음보는 사람은 {...item}이 의미하는 것이 뭐인지 판단하기 어렵다.

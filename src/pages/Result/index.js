@@ -9,8 +9,11 @@ import Stack from '../../components/Stack'
 
 function Result() {
   const dispatch = useDispatch()
+  // 액션디스패치
   const { search } = useLocation()
+  // 검색된 데이터
   const { items } = useSelector(selectBooks)
+  // 받아온 데이터
 
   useEffect(() => {
     if (!search) {
@@ -19,6 +22,8 @@ function Result() {
 
     dispatch(fetchBooks(search))
   }, [dispatch, search])
+
+  // 받아올 북데이터에서 search를 필터한다
 
   return (
     <div className={styles.wrapper}>

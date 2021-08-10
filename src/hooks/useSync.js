@@ -9,7 +9,6 @@ function useSync() {
 
   useEffect(() => {
     if (!search) {
-      return
     }
 
     dispatch(setSearch(search))
@@ -17,3 +16,6 @@ function useSync() {
 }
 
 export default useSync
+
+// 검색이 없다면 아무것도 리턴하지 않는다.
+// search 키워드가 존재한다면 setSearch로 상태값을 저장한다

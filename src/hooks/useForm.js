@@ -10,6 +10,8 @@ const initialState = {
   printType: 'all'
 }
 
+// 상태값
+
 function reducer(state, action) {
   switch (action.type) {
     case 'change':
@@ -22,8 +24,11 @@ function reducer(state, action) {
   }
 }
 
+// 상태를 저장하는 리듀서
+
 function useForm() {
   const history = useHistory()
+  // 다음페이지로 값을 전달할때 쓰는 hooks
   const location = useLocation()
   const [state, dispatch] = useReducer(reducer, {
     ...initialState,
@@ -37,6 +42,7 @@ function useForm() {
     })
 
     history.push(path)
+    // form에 대한 주소값을 전달한다
   }
 
   function handleSubmit(e) {
